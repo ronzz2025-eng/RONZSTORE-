@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,45 +12,43 @@
 body, html {
     font-family: 'Poppins', sans-serif;
     height: 100%;
-    background-color: #000; /* hitam untuk halaman utama */
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Tombol utama dengan logo sebagai background */
+/* Tombol utama */
 #mainBtn {
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    background: url('https://files.catbox.moe/oe2382.jpg') no-repeat center center;
+    background: url('https://files.catbox.moe/w3cgya.jpg') no-repeat center center;
     background-size: cover;
-    border: 3px solid #fff;
+    border: 3px solid #ffffff;
     cursor: pointer;
-    box-shadow: 0 0 20px #ff0000;
+    box-shadow: 0 0 20px #007bff;
     transition: all 0.3s;
 }
 #mainBtn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 35px #ff0000;
+    box-shadow: 0 0 35px #1e90ff;
 }
 
-/* Overlay halaman kedua */
+/* Overlay */
 #overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.95);
+    inset: 0;
+    background-color: rgba(0,0,0,0.96);
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    flex-direction: column;
     padding: 20px;
 }
 
 .card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.06);
     backdrop-filter: blur(15px);
     border-radius: 25px;
     padding: 30px;
@@ -57,23 +56,22 @@ body, html {
     max-width: 420px;
     width: 100%;
     color: #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .logo {
     width: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 4px solid #fff;
+    border: 4px solid #1e90ff;
     transition: transform 0.3s;
 }
-
 .logo:hover { transform: scale(1.1); }
 
 h1 {
     font-size: 28px;
     margin-bottom: 25px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    text-shadow: 0 0 10px rgba(30,144,255,0.7);
 }
 
 .btn {
@@ -85,8 +83,7 @@ h1 {
     font-weight: 600;
     font-size: 16px;
     color: #fff;
-    text-align: center;
-    background-color: #8B0000;
+    background: linear-gradient(135deg, #007bff, #1e90ff);
     position: relative;
     overflow: hidden;
     transition: all 0.3s;
@@ -94,60 +91,57 @@ h1 {
 .btn::before {
     content: "";
     position: absolute;
-    top: 0; left: -75%;
-    width: 50%; height: 100%;
-    background: rgba(255,255,255,0.15);
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
     transform: skewX(-25deg);
     transition: all 0.5s;
 }
 .btn:hover::before { left: 125%; }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 0 15px #ff0000; }
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px #1e90ff;
+}
 
 .note {
     margin-top: 15px;
     font-size: 14px;
     font-weight: bold;
-    color: #FF0000;
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500;
+    color: #1e90ff;
+    text-shadow: 0 0 6px #1e90ff, 0 0 12px #00bfff;
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
-    0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500; }
-    50% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6347; }
-    100% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500; }
+    from { text-shadow: 0 0 6px #1e90ff; }
+    to { text-shadow: 0 0 14px #00bfff; }
 }
 </style>
 </head>
 <body>
 
-<!-- Halaman utama -->
 <button id="mainBtn"></button>
 
-<!-- Overlay halaman kedua -->
 <div id="overlay">
     <div class="card">
-        <img src="https://files.catbox.moe/oe2382.jpg" alt="RONZ STORE Logo" class="logo">
+        <img src="https://files.catbox.moe/w3cgya.jpg" class="logo" alt="RONZ STORE">
         <h1>RONZ STORE</h1>
 
-        <a href="https://wa.me/6285148364728" target="_blank" class="btn">WhatsApp REAL</a>
-        <a href="https://whatsapp.com/channel/0029Vb72Nn18qIzu4vt6Lr33" target="_blank" class="btn">Saluran Resmi</a>
+        <a href="https://wa.me/62881012692852" target="_blank" class="btn">WhatsApp REAL</a>
+        <a href="https://whatsapp.com/channel/0029VbBmAyaHwXb8AEGRjw08" target="_blank" class="btn">Saluran Resmi</a>
         <a href="https://tiktok.com/@ronzstore16666" target="_blank" class="btn">TikTok</a>
         <a href="https://t.me/I16666Z" target="_blank" class="btn">Telegram</a>
-        <a href="https://whatsapp.com/channel/0029Vb7DeHe0VycG7ZcqAj0F" target="_blank" class="btn">List Produk/Jasa</a>
-        <a href="https://chat.whatsapp.com/DmkWIk6jplaHpj5f6FvgY0" target="_blank" class="btn">Group 1</a>
 
-        <p class="note">⚠️ SELAIN ITU CLONE</p>
+        <p class="note">⚠️ SELAIN INI CLONE</p>
     </div>
 </div>
 
 <script>
-const mainBtn = document.getElementById('mainBtn');
-const overlay = document.getElementById('overlay');
-
-mainBtn.addEventListener('click', () => {
-    overlay.style.display = 'flex';
-});
+document.getElementById('mainBtn').onclick = () => {
+    document.getElementById('overlay').style.display = 'flex';
+};
 </script>
 
 </body>
